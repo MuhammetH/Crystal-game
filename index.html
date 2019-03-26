@@ -8,12 +8,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Crystal game</title>
   </head>
   <body> 
+      <div id="title">
+        <h1>Crystal Game</h1>
+      </div>
       <header>
-            <h1>Crystal Game</h1>
             <p>You will be given a random number at the start of the game.<br>
             <br>There are four crysals below. By clicking on a crystal you will add a spesific amount of points to your total score.<br>
             <br>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.<br>
@@ -27,16 +30,16 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-3">
+            <div id="crystal-1" class="col-3">
                 <img src="assets/images/crystal1.jpg" alt="crystal-1">
             </div>
-            <div class="col-3">
+            <div id="crystal-2" class="col-3">
                 <img src="assets/images/crystal2.jpg" alt="crystal-2">
             </div>
-            <div class="col-3">
+            <div id="crystal-3" class="col-3">
                 <img src="assets/images/crystal3.jpg" alt="crystal-3">
             </div>
-            <div class="col-3">
+            <div id="crystal-4" class="col-3">
                 <img src="assets/images/crystal4.jpg" alt="crystal-4">
             </div>
 
@@ -45,6 +48,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     
@@ -53,6 +57,6 @@
     
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  
+     <script src="assets/javascript/game.js"></script>
     </body>
 </html>
