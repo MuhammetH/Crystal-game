@@ -1,14 +1,22 @@
-.Container{
-    margin: 20px;
-    padding: 10px;
-
-}
 body{
     background-color: antiquewhite;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
 }
-div.dotted {
-    border-style: dotted;
-    text-align: center;
-    border-width: 5px 5px 5px 5px;
-    border-color:red;
+
+header{
+    margin: 20px;
+}
+
+.crystals{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.crystal{
+    border: 1px solid red;
+    height: 250px;
+    width: 250px;
+
 }
