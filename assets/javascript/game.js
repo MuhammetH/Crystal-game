@@ -1,43 +1,60 @@
 var randomNumber;
-var lost;
-var win;
-var previous= 0;
+var lost = 0;
+var win = 0;
+var currentNumber = 0;
 
+var game = function () {
 
-randomNumber = Math.floor((Math.random()* 101) + 19);// generates a number between  19-120
-$("#result").html('Random Result: ' + randomNumber);
+    $(".crystals").empty();
 
-console.log(randomNumber)
+    randomNumber = Math.floor(Math.random() * 101 + 19); // generates a number between  19-120
+    $("#result").html("Random Result: " + randomNumber);
 
-for(var i = 0; i < 4;i++){// generates random number between 12-1 for each crystal 
+    console.log(randomNumber);
 
-    var random = Math.floor((Math.random() * 11)+ 1);
+    for (var i = 0; i < 4; i++) {
 
-    //console.log(random)
+        var random = Math.floor(Math.random() * 11 + 1);// generates random number between 12-1 for each crystal
 
-    var crystal = $("<div>");
+        //console.log(random)
+
+        var crystal = $("<div>");
         crystal.attr({
-         "class": 'crystal',
-         "data-random": random// shows the random number for each crystal at sources 
-     });
+            class: "crystal",
+            "data-random": random // shows the random number for each crystal at sources
+        });
 
-    $(".crystals").append(crystal);
-}
+        $(".crystals").append(crystal);
+    }
+};
 
-$(".crystal").on('click', function(){
+game();
 
-    var num = parseInt($(this).attr('data-random'));
+$(document).on('click', ".crystal", function () {
+    var num = parseInt($(this).attr("data-random"));// turning the variable into the number
 
-    previous += num;
+    currentNumber += num;
 
-    console.log(previous);
+    $("#current").html("Current Number: " + currentNumber)
+    console.log(currentNumber);
 
-    if(previous > randomNumber){
-        console.log("you lost!!")
+    if (currentNumber > randomNumber) {
+        //console.log("you lost!!");
+        lost++;
+        $("#losses").html("Losses: " + lost);
+
+        currentNumber = 0;
+        $("#current").html("Current Number: " + currentNumber)
+        game();
     }
 
-    else if(previous = randomNumber){
-        console.log("you win")
+    else if (currentNumber === randomNumber) {
+        //console.log("you win");
+        win++;
+        $("#wins").html("Wins: " + win);
+
+        currentNumber= 0;
+        $("#current").html("Current Number: " + currentNumber)
+        game();
     }
-    
 });
