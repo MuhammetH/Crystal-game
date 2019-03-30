@@ -7,6 +7,13 @@ var game = function () {
 
     $(".crystals").empty();
 
+    var images = [
+        './assets/images/crystal1.jpg',
+        './assets/images/crystal2.jpg',
+        './assets/images/crystal3.jpg',
+        './assets/images/crystal4.jpg'
+    ]
+
     randomNumber = Math.floor(Math.random() * 101 + 19); // generates a number between  19-120
     $("#result").html("Random Result: " + randomNumber);
 
@@ -24,8 +31,14 @@ var game = function () {
             "data-random": random // shows the random number for each crystal at sources
         });
 
+        crystal.css({
+            "background-image":"src('" + images[i] + "')",
+            "background-size":"cover"
+        });
+
         $(".crystals").append(crystal);
     }
+    $("#current").html("Current Number: " + currentNumber)
 };
 
 game();
@@ -44,7 +57,6 @@ $(document).on('click', ".crystal", function () {
         $("#losses").html("Losses: " + lost);
 
         currentNumber = 0;
-        $("#current").html("Current Number: " + currentNumber)
         game();
     }
 
@@ -54,7 +66,6 @@ $(document).on('click', ".crystal", function () {
         $("#wins").html("Wins: " + win);
 
         currentNumber= 0;
-        $("#current").html("Current Number: " + currentNumber)
         game();
     }
 });

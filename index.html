@@ -21,16 +21,16 @@
       crossorigin="anonymous"
     ></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/style.css"/> 
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <title>Crystal game</title>
   </head>
   <body>
-
     <header>
-        <h1>Crystal Game</h1>
+      <h1>Crystal Game</h1>
       <p>
         You will be given a random number at the start of the game.<br />
         <br />There are four crysals below. By clicking on a crystal you will
@@ -40,20 +40,18 @@
         <br />The valuse of the each crystal is hidden from you until you click
         on it.<br />
         <br />each time when the game starts, the game will change the value of
-        each crystal.<br>
+        each crystal.<br />
       </p>
     </header>
 
-    
-    <div class="crystals">
-        
+    <div class="crystals"></div>
+    <div class="dotted">
+      <p id="result"></p>
+      <p id="current"></p>
+      <p id="wins"></p>
+      <p id="losses"></p>
     </div>
-    <p id="result"></p>
-    <p id="current"></p>
-    <p id="wins"></p>
-    <p id="losses"></p>
 
     <script type="text/javascript" src="assets/javascript/game.js"></script>
-
   </body>
 </html>
