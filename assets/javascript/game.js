@@ -32,7 +32,7 @@ var game = function () {
         });
 
         crystal.css({
-            "background-image":"src('" + images[i] + "')",
+            "background-image":"url('" + images[i] + "')",
             "background-size":"cover"
         });
 
