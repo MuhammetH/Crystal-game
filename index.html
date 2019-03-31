@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Crystal game</title>
+  </head>
+  <body>
+    <header>
+      <h1>Crystal Game</h1>
+      <p>
+        You will be given a random number at the start of the game.<br />
+        <br />There are four crysals below. By clicking on a crystal you will
+        add a spesific amount of points to your total score.<br />
+        <br />You win the game by matching your total score to random number,
+        you lose the game if your total score goes above the random number.<br />
+        <br />The valuse of the each crystal is hidden from you until you click
+        on it.<br />
+        <br />each time when the game starts, the game will change the value of
+        each crystal.<br />
+      </p>
+    </header>
+
+    <div class="crystals"></div>
+    <div class="dotted">
+      <p id="result"></p>
+      <p id="current"></p>
+      <p id="wins"></p>
+      <p id="losses"></p>
+    </div>
+
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+  </body>
+</html>
